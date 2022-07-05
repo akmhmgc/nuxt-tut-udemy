@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h2 class='text-lg'>商品一覧</h2>
+    <h2 class="text-lg">商品一覧</h2>
     <nuxt-link to="/products/create">新規作成</nuxt-link>
-    <NuxtLogo/>
-    <BaseHeader/>
+    <NuxtLogo />
+    <BaseHeader />
 
     <table>
       <tr>
@@ -17,10 +17,19 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { Context } from '@nuxt/types'
 
-export default Vue.extend({
-  name: 'IndexPage',
-})
+export default {
+  asyncData() {
+    console.log('asyncData')
+  },
+  created() {
+    console.log('created')
+  },
+  fetch({ route }: Context) {
+    console.log('fetch')
+    console.log(route)
+  },
+}
 </script>
 
