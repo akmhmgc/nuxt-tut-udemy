@@ -4,9 +4,12 @@
 </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
 
+export default {
+  mounted() {
+    (this as any).$test('this is typescript man!')
+  },
 }
 </script>
 

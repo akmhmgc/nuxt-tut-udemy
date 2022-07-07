@@ -17,19 +17,8 @@
 </template>
 
 <script lang="ts">
-import { Context } from '@nuxt/types'
-
-export default {
-  asyncData() {
-    console.log('asyncData')
-  },
-  created() {
-    console.log('created')
-  },
-  fetch({ route }: Context) {
-    console.log('fetch')
-    console.log(route)
-  },
-}
+import Vue from 'vue'
+export default Vue.extend({
+  name: 'IndexPage',
+})
 </script>
-
